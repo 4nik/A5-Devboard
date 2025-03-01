@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-slate-100">
     <div class="container mx-auto py-2 px-16 h-screen  bg-slate-100 flex flex-col">
         <!-- Navbar Section -->
@@ -24,6 +26,38 @@
                 </div>
             </div>
         </div>
+        <div class="flex gap-4 h-full">
+            <div class="w-5/7 grid grid-cols-12 gap-4 h-full bg-white">
+                <div
+                    class="col-span-3 h-22 bg-slate-100 border border-gray-300 rounded-lg p-2 flex flex-col items-center justify-center">
+                    <div class="flex items-center">
+                        <img src="./assets/checkbox.png" alt="Checkbox" class="h-6 w-6 mr-5">
+                        <div>
+                            <p class="text-base font-medium">Task Assigned</p>
+                            <p class="text-3xl font-bold">6</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-span-6 h-22 rounded-xl border border-gray-300 flex items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9A8BF8] shadow-lg">
+
+                    <div class="ml-6">
+                        <img src="./assets/board.png" alt="Board" class="h-16 w-16">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-white font-medium">Discover Something New Today!</p>
+                    </div>
+
+                </div>
+                <div
+                    class="col-span-3 h-22 flex items-center justify-center bg-slate-100 rounded-lg border border-gray-300">
+                    <div class="bg-white rounded-full p-3 mr-4 mb-2"><img src="./assets/calender.png" alt="Calender"
+                            class="w-6 h-6"></div>
+                    <p class="text font-medium">Tue, Feb 25 2025</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
