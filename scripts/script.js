@@ -189,6 +189,10 @@ document.getElementById("btn-task-6")
             alert("congrates!!! You have completed all the current tasks");
         }
     })
+document.getElementById("activity-history").addEventListener("click", function () {
+    const activityLogElement = document.getElementById("activity-log");
+    activityLogElement.innerHTML = "";
+});
 
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
