@@ -1,6 +1,12 @@
 function getLocalTime() {
     const dateTime = new Date();
-    const setTimeFormat = { timeZone: 'Asia/Dhaka', hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    const setTimeFormat = {
+        timeZone: 'Asia/Dhaka',
+        hour12: true,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    };
     const formattedTime = dateTime.toLocaleTimeString('en-US', setTimeFormat);
     return formattedTime;
 }
@@ -189,10 +195,11 @@ document.getElementById("btn-task-6")
             alert("congrates!!! You have completed all the current tasks");
         }
     })
-document.getElementById("activity-history").addEventListener("click", function () {
-    const activityLogElement = document.getElementById("activity-log");
-    activityLogElement.innerHTML = "";
-});
+document.getElementById("activity-history")
+    .addEventListener("click", function () {
+        const activityLogElement = document.getElementById("activity-log");
+        activityLogElement.innerHTML = "";
+    });
 
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
@@ -212,3 +219,7 @@ document.getElementById('theme-btn').addEventListener("click", function () {
     divColor.style.backgroundColor = randomColor;
     sectionColor.style.backgroundColor = randomColor;
 });
+document.getElementById("discover-section")
+    .addEventListener("click", function () {
+        window.location.href = "query.html";
+    });
