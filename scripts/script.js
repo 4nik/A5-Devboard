@@ -65,3 +65,34 @@ document.getElementById("btn-task-2")
             alert("congrates!!! You have completed all the current tasks");
         }
     })
+
+document.getElementById("btn-task-3")
+    .addEventListener("click", function (event) {
+        alert("Board updated Successfully");
+        const button = event.target;
+        const taskAssignedElement = document.getElementById("remaining-task");
+        const activityLogElement = document.getElementById("activity-log");
+        const currentCount = parseInt(taskAssignedElement.innerText);
+        const totalTask = document.getElementById("counter");
+        const totalTaskCount = parseInt(totalTask.innerText);
+        taskAssignedElement.innerText = currentCount - 1;
+        totalTask.innerText = totalTaskCount + 1;
+        button.disabled = true;
+        const newActivity = document.createElement("p");
+        const formattedTime = getLocalTime();
+        newActivity.classList.add(
+            "text-small",
+            "bg-slate-100",
+            "p-1",
+            "rounded-xl",
+            "text-gray-700",
+            "mb-2",
+            "text-center"
+        );
+        newActivity.innerText = `You have Completed the Add new reaction at ${formattedTime}`;
+        activityLogElement.appendChild(newActivity);
+        taskCount--;
+        if (!taskCount) {
+            alert("congrates!!! You have completed all the current tasks");
+        }
+    })
