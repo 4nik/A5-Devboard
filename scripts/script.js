@@ -95,7 +95,7 @@ document.getElementById("btn-task-3")
             "mb-2",
             "text-center"
         );
-        newActivity.innerText = `You have Completed the Add new reaction at ${formattedTime}`;
+        newActivity.innerText = `You have Completed the Add new reaction 🤲 at ${formattedTime}`;
         activityLogElement.appendChild(newActivity);
         taskCount--;
         if (!taskCount) {
@@ -223,3 +223,19 @@ document.getElementById("discover-section")
     .addEventListener("click", function () {
         window.location.href = "query.html";
     });
+
+function formatDate(date) {
+    const format = {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        timeZone: 'Asia/Dhaka'
+    };
+    return date.toLocaleDateString('en-US', format);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const currentDate = new Date();
+    document.getElementById("current-date").innerText = formatDate(currentDate);
+});
