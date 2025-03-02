@@ -202,3 +202,13 @@ function getRandomColor() {
     }
     return color;
 }
+document.getElementById('theme-btn').addEventListener("click", function () {
+    const randomColor = getRandomColor();
+    document.body.style.backgroundColor = randomColor;
+    const divColor = document.getElementById("div-color");
+    const bodyColor = document.getElementById("body-color");
+    const sectionColor = document.getElementById("section-color");
+    bodyColor.style.backgroundColor = randomColor;
+    divColor.style.backgroundColor = randomColor;
+    sectionColor.style.backgroundColor = randomColor;
+});

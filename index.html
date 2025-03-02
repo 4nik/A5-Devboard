@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-100">
-    <div class="container mx-auto py-2 px-16 h-screen  bg-slate-100 flex flex-col">
+<body id="body-color" class="bg-slate-100">
+    <div id="section-color" class="container mx-auto py-2 px-16 h-screen  bg-slate-100 flex flex-col">
         <!-- Navbar Section -->
         <div class="w-full h-24 bg-white rounded-lg border border-gray-300 flex items-center justify-between mb-4 px-6">
             <div class="flex items-center gap-2">
@@ -21,20 +21,23 @@
                     <img src="assets/checkbox.png" alt="Theme btn" class="w-6 h-6" />
                     <p id="counter" class="text-xl font-bold">23</p>
                 </div>
-                <div class="bg-slate-100 rounded-2xl p-2 flex items-center justify-center">
+                <div id="theme-btn" class="bg-slate-100 rounded-2xl p-2 flex items-center justify-center">
                     <img src="assets/theme-btn.png" alt="Theme btn" class="w-6 h-6" />
                 </div>
             </div>
         </div>
+
+        <!-- Main Content Section -->
         <div class="flex gap-4 h-full">
-            <div class="w-5/7 grid grid-cols-12 gap-4 h-full bg-white">
+            <!-- Left Column -->
+            <div id="div-color" class="w-5/7 grid grid-cols-12 gap-4 h-full bg-white">
                 <div
                     class="col-span-3 h-22 bg-slate-100 border border-gray-300 rounded-lg p-2 flex flex-col items-center justify-center">
                     <div class="flex items-center">
                         <img src="./assets/checkbox.png" alt="Checkbox" class="h-6 w-6 mr-5">
                         <div>
                             <p class="text-base font-medium">Task Assigned</p>
-                            <p class="text-3xl font-bold">6</p>
+                            <p id="remaining-task" class="text-3xl font-bold">6</p>
                         </div>
                     </div>
                 </div>
@@ -55,6 +58,7 @@
                             class="w-6 h-6"></div>
                     <p class="text font-medium">Tue, Feb 25 2025</p>
                 </div>
+
                 <div class="col-span-4 h-42 bg-slate-100 border border-gray-300 rounded-lg p-3">
                     <div class="inline-block bg-white border border-gray-200 rounded-full px-3 py-1 mb-1">
                         <p class="font-medium">Shop Ease</p>
@@ -90,7 +94,6 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="text-gray-800 font-medium">25 March 2025</p>
                         </div>
-                        <!-- <button class="bg-blue-700 text-white rounded-lg px-2 py-1">Completed</button> -->
                         <button id="btn-task-2"
                             class="bg-[#3752FD] hover:bg-blue-700 text-white py-1 px-4 rounded-md disabled:bg-gray-300 disabled:opacity-70 disabled:cursor-not-allowed">
                             Completed
@@ -112,7 +115,6 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="text-gray-800 font-medium">31 March 2025</p>
                         </div>
-                        <!-- <button class="bg-blue-700 text-white rounded-lg px-2 py-1">Completed</button> -->
                         <button id="btn-task-3"
                             class="bg-[#3752FD] hover:bg-blue-700 text-white py-1 px-4 rounded-md disabled:bg-gray-300 disabled:opacity-70 disabled:cursor-not-allowed">
                             Completed
@@ -134,7 +136,6 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="text-gray-800 font-medium">21 March 2025</p>
                         </div>
-                        <!-- <button class="bg-blue-700 text-white rounded-lg px-2 py-1">Completed</button> -->
                         <button id="btn-task-4"
                             class="bg-[#3752FD] hover:bg-blue-700 text-white py-1 px-4 rounded-md disabled:bg-gray-300 disabled:opacity-70 disabled:cursor-not-allowed">
                             Completed
@@ -156,7 +157,6 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="text-gray-800 font-medium">01 April 2025</p>
                         </div>
-                        <!-- <button class="bg-blue-700 text-white rounded-lg px-2 py-1">Completed</button> -->
                         <button id="btn-task-5"
                             class="bg-[#3752FD] hover:bg-blue-700 text-white py-1 px-4 rounded-md disabled:bg-gray-300 disabled:opacity-70 disabled:cursor-not-allowed">
                             Completed
@@ -178,7 +178,6 @@
                             <p class="text-gray-500">Deadline</p>
                             <p class="text-gray-800 font-medium">05 May 2025</p>
                         </div>
-                        <!-- <button class="bg-blue-700 text-white rounded-lg px-2 py-1">Completed</button> -->
                         <button id="btn-task-6"
                             class="bg-[#3752FD] hover:bg-blue-700 text-white py-1 px-4 rounded-md disabled:bg-gray-300 disabled:opacity-70 disabled:cursor-not-allowed">
                             Completed
@@ -186,21 +185,18 @@
                     </div>
                 </div>
             </div>
+
             <!-- Right Sidebar -->
-            <div class="col-span-4 bg-white border border-gray-300 rounded-lg p-4 row-span-full min-w-[20%]">
+            <div class="col-span-4 bg-white border border-gray-300 rounded-lg p-4 row-span-full min-w-[24%]">
                 <div class="flex items-center justify-center">
                     <img src="./assets/activity.png" alt="Activity Log" class="w-4 h-4 mr-2">
                     <h2 class="text-lg font-semibold text-black text-center">Activity Log</h2>
                 </div>
-                <button id="activity-history" class="bg-blue-800 px-4 py-[6px] text-white rounded-lg mt-4 mb-4 mx-auto block">Clear
+                <button id="activity-history"
+                    class="bg-blue-800 px-4 py-[6px] text-white rounded-lg mt-4 mb-4 mx-auto block">Clear
                     History</button>
-                <div id="activity-log" class="space-y-2 text-center">
-                    <!-- <p class="text-base bg-slate-100 p-2 rounded-xl text-gray-700">You have Complete The Task Add
-                        Dark
-                        Mode at 12:48:15 PM</p>
-                    <p class="text-base bg-slate-100 p-2 rounded-xl text-gray-700">You have Complete The Task Add
-                        Dark
-                        Mode at 12:48:15 PM</p> -->
+                <div id="activity-log" class=" w-full space-y-1">
+                
                 </div>
             </div>
         </div>
